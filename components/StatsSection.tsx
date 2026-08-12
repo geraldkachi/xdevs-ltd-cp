@@ -72,7 +72,7 @@ export default function StatsSection() {
           >
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 border border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg)] transition-all duration-150"
+              className="inline-flex items-center gap-3 border border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg transition-all duration-150"
             >
               MORE ABOUT XDEVS
             </Link>

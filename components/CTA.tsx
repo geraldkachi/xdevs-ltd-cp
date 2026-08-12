@@ -24,7 +24,7 @@ export default function CTA() {
         </div>
         <Link
           href="mailto:hello@xdevs.io"
-          className="bg-fg text-[var(--bg)] px-10 py-6 font-body font-bold text-[11px] tracking-widest uppercase flex items-center gap-3 hover:bg-accent hover:text-white transition-all duration-150 whitespace-nowrap"
+          className="bg-accent text-[var(--bg)] px-10 py-6 font-body font-bold text-[11px] tracking-widest uppercase flex items-center gap-3 hover:bg-accent hover:text-white transition-all duration-150 whitespace-nowrap"
         >
           START NOW →
         </Link>

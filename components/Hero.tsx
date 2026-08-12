@@ -70,7 +70,7 @@ export default function Hero() {
           >
             <Link
               href="mailto:hello@xdevs.io"
-              className="flex items-center gap-2 bg-fg text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-7 py-4 hover:bg-accent hover:text-white transition-all duration-150"
+              className="flex items-center gap-2 bg-accent text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-7 py-4 hover:bg-accent hover:text-white transition-all duration-150"
             >
               START A PROJECT →
             </Link>

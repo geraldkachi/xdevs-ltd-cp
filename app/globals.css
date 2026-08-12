@@ -16,7 +16,8 @@
     --fg-2: #3a3a3a;
     --fg-3: #717171;
     --border-col: #e0e0e0;
-    --accent: #3B82FF;
+    /* --accent: #3B82FF; */
+    --accent: #999999;
   }
   .dark {
     --bg: #000000;
@@ -26,7 +27,8 @@
     --fg-2: #c8c8c8;
     --fg-3: #717171;
     --border-col: #1f1f1f;
-    --accent: #3B82FF;
+    /* --accent: #3B82FF; */
+    --accent: #999999;
   }
   html { scroll-behavior: smooth; }
   body {
