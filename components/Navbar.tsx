@@ -81,7 +81,8 @@ export default function Navbar() {
             {/* CTA */}
             <Link
               href="mailto:hello@xdevs.io"
-              className="hidden sm:flex h-14 items-center px-6 text-[11px] font-body font-bold tracking-widest uppercase bg-fg text-[var(--bg)] hover:bg-accent hover:text-white transition-all duration-150"
+                        className="flex items-center gap-2 border-[var(--border-col)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-7 py-4 hover:bg-[var(--bg-2)] transition-all duration-150 ml-0"
+              // className="hidden sm:flex h-14 items-center px-6 text-[11px] font-body font-bold tracking-widest uppercase bg-fg text-[var(--bg)] hover:bg-accent hover:text-white transition-all duration-150"
             >
               GET STARTED →
             </Link>

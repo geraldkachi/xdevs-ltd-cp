@@ -24,7 +24,8 @@ export default function CTA() {
         </div>
         <Link
           href="mailto:hello@xdevs.io"
-          className="bg-accent text-[var(--bg)] px-10 py-6 font-body font-bold text-[11px] tracking-widest uppercase flex items-center gap-3 hover:bg-accent hover:text-white transition-all duration-150 whitespace-nowrap"
+            className="inline-flex items-center gap-3 border !border-l-0 !border-r-0 border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg transition-all duration-150"
+          // className="bg-accent text-[var(--bg)] px-10 py-6 font-body font-bold text-[11px] tracking-widest uppercase flex items-center gap-3 hover:bg-accent hover:text-white transition-all duration-150 whitespace-nowrap"
         >
           START NOW →
         </Link>
@@ -71,9 +72,15 @@ export default function CTA() {
               ))}
             </div>
 
-            <Link
+            {/* <Link
               href="mailto:hello@xdevs.io"
-              className="self-start flex items-center gap-3 bg-fg text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-8 py-4 hover:bg-accent hover:text-white transition-all duration-150"
+              className="self-start flex items-center gap-3 bg-f bg-bg-accent text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-8 py-4 hover:bg-accent hover:text-white transition-all duration-150"
+            >
+              GET IN TOUCH →
+            </Link> */}
+             <Link
+              href="/about"
+              className="w-max inline-flex items-center gap-3 border border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg transition-all duration-150"
             >
               GET IN TOUCH →
             </Link>
