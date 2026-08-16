@@ -104,45 +104,31 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8, ease: [0.16,1,0.3,1] }}
             className="relative z-10 flex flex-col items-center pb-12"
           >
-            {/* Dev mascot SVG */}
-            <svg viewBox="0 0 200 320" width="220" className="drop-shadow-2xl">
-              {/* Head */}
+            {/* <svg viewBox="0 0 200 320" width="220" className="drop-shadow-2xl">
               <ellipse cx="100" cy="72" rx="44" ry="46" fill="#d4956a"/>
-              {/* Hard hat */}
               <ellipse cx="100" cy="38" rx="52" ry="14" fill="#F59E0B"/>
               <rect x="48" y="30" width="104" height="16" rx="3" fill="#F59E0B"/>
-              {/* Hat brim */}
               <ellipse cx="100" cy="46" rx="58" ry="8" fill="#D97706"/>
-              {/* Eyes */}
               <circle cx="85" cy="70" r="6" fill="#1a1a1a"/>
               <circle cx="115" cy="70" r="6" fill="#1a1a1a"/>
               <circle cx="87" cy="68" r="2" fill="white"/>
               <circle cx="117" cy="68" r="2" fill="white"/>
-              {/* Smile */}
               <path d="M88 88 Q100 100 112 88" stroke="#1a1a1a" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-              {/* Neck */}
               <rect x="90" y="114" width="20" height="16" fill="#d4956a"/>
-              {/* Body - dark tshirt */}
               <rect x="52" y="128" width="96" height="110" rx="8" fill="#0f172a"/>
-              {/* XDEVS text on shirt */}
               <text x="100" y="178" textAnchor="middle" fill="white" fontFamily="var(--font-space)" fontWeight="800" fontSize="16" letterSpacing="-1">XDEVS</text>
-              {/* Laptop */}
               <rect x="68" y="192" width="64" height="40" rx="3" fill="#1e293b" stroke="#334155" strokeWidth="1.5"/>
               <rect x="70" y="194" width="60" height="36" rx="2" fill="#0f172a"/>
-              {/* Screen content on laptop */}
               <rect x="74" y="198" width="30" height="3" rx="1" fill="#3B82FF" opacity="0.8"/>
               <rect x="74" y="204" width="20" height="2" rx="1" fill="#4ade80" opacity="0.7"/>
               <rect x="74" y="209" width="25" height="2" rx="1" fill="#f472b6" opacity="0.7"/>
               <rect x="74" y="214" width="18" height="2" rx="1" fill="#94a3b8" opacity="0.6"/>
-              {/* Laptop base */}
               <rect x="60" y="232" width="80" height="5" rx="2" fill="#334155"/>
-              {/* Legs */}
               <rect x="68" y="236" width="26" height="70" rx="6" fill="#1e40af"/>
               <rect x="106" y="236" width="26" height="70" rx="6" fill="#1e40af"/>
-              {/* Shoes */}
               <ellipse cx="81" cy="308" rx="18" ry="9" fill="#0f172a"/>
               <ellipse cx="119" cy="308" rx="18" ry="9" fill="#0f172a"/>
-            </svg>
+            </svg> */}
 
             {/* Label badge */}
             <div className="mt-4 bg-fg text-[var(--bg)] font-body font-bold text-[10px] tracking-widest uppercase px-4 py-2">
