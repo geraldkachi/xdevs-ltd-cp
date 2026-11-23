@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { StarsBackground } from '@/components/three'
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -9,7 +10,9 @@ export default function Hero() {
 
   return (
     <section className="relative w-full border-b border-[var(--border-col)] overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] min-h-[calc(100vh-3.5rem-2.25rem)]">
+      {/* Moving star field behind the whole hero */}
+      <StarsBackground count={3000} />
+      <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto]">
         {/* Left — text */}
         <div className="flex flex-col justify-between px-6 lg:px-12 pt-12 pb-10 border-r border-[var(--border-col)]">
           {/* Label row */}
@@ -69,7 +72,7 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-0 mt-10"
           >
             <Link
-              href="mailto:hello@xdevs.io"
+              href="/contact"
               className="flex items-center gap-2 bg-accent text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-7 py-4 hover:bg-accent hover:text-white transition-all duration-150"
             >
               START A PROJECT →
@@ -84,7 +87,7 @@ export default function Hero() {
         </div>
 
         {/* Right — mascot / visual panel */}
-        <div className="hidden lg:flex flex-col items-center justify-end bg-[var(--bg-2)] w-[380px] xl:w-[460px] relative overflow-hidden">
+        <div className="hidden lg:flex flex-col items-center justify-end w-[380px] xl:w-[460px] relative overflow-hidden" style={{ background: 'color-mix(in srgb, var(--bg-2) 55%, transparent)' }}>
           {/* Blue accent vertical stripe */}
           <div className="absolute left-0 top-0 bottom-0 w-px bg-[var(--border-col)]" />
 
@@ -104,7 +107,7 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8, ease: [0.16,1,0.3,1] }}
             className="relative z-10 flex flex-col items-center pb-12"
           >
-            {/* <svg viewBox="0 0 200 320" width="220" className="drop-shadow-2xl">
+            <svg viewBox="0 0 200 320" width="220" className="drop-shadow-2xl">
               <ellipse cx="100" cy="72" rx="44" ry="46" fill="#d4956a"/>
               <ellipse cx="100" cy="38" rx="52" ry="14" fill="#F59E0B"/>
               <rect x="48" y="30" width="104" height="16" rx="3" fill="#F59E0B"/>
@@ -128,12 +131,8 @@ export default function Hero() {
               <rect x="106" y="236" width="26" height="70" rx="6" fill="#1e40af"/>
               <ellipse cx="81" cy="308" rx="18" ry="9" fill="#0f172a"/>
               <ellipse cx="119" cy="308" rx="18" ry="9" fill="#0f172a"/>
-            </svg> */}
+            </svg>
 
-            {/* Label badge */}
-            <div className="mt-4 bg-fg text-[var(--bg)] font-body font-bold text-[10px] tracking-widest uppercase px-4 py-2">
-              XDEVS ENGINEER
-            </div>
           </motion.div>
         </div>
       </div>
@@ -143,7 +142,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.4 }}
-        className="grid grid-cols-2 md:grid-cols-4 border-t border-[var(--border-col)]"
+        className="relative grid grid-cols-2 md:grid-cols-4 border-t border-[var(--border-col)] bg-[var(--bg)]"
       >
         {[
           { num: '50+', label: 'PRODUCTS SHIPPED' },

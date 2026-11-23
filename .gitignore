@@ -3,3 +3,5 @@ node_modules/
 out/
 .env*.local
 .DS_Storenode_modules/
+.env*.local
+config.bat

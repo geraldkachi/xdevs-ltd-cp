@@ -37,7 +37,7 @@ export default function ServicePageLayout({ index, tag, title, tagline, descript
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16,1,0.3,1] }}
               className="font-display font-extrabold text-fg tracking-tight leading-[0.88] pb-10"
-              style={{ fontSize: 'clamp(3rem, 8vw, 8rem)' }}
+              style={{ fontSize: 'clamp(2.25rem, 5.5vw, 5rem)' }}
             >
               {title}
             </motion.h1>
@@ -51,7 +51,7 @@ export default function ServicePageLayout({ index, tag, title, tagline, descript
             </div>
             <div className="px-6 lg:px-12 py-10 flex flex-col gap-6">
               <p className="text-[10px] font-body font-semibold tracking-widest uppercase text-fg-3">READY TO START?</p>
-              <Link href="mailto:hello@xdevs.io" className="w-max inline-flex items-center gap-3 border border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg transition-all duration-150"
+              <Link href="/contact" className="w-max inline-flex items-center gap-3 border border-[var(--fg)] text-fg font-body font-bold text-[11px] tracking-widest uppercase px-6 py-3.5 hover:bg-fg hover:text-[var(--bg)] transition-all duration-150"
               // className="self-start flex items-center gap-3 bg-fg text-[var(--bg)] font-body font-bold text-[11px] tracking-widest uppercase px-8 py-4 hover:bg-accent hover:text-white transition-all duration-150"
               >
                 GET IN TOUCH →
