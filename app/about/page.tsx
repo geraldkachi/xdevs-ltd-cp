@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTA from '@/components/CTA'
+import TeamSection from '@/components/TeamSection'
 export const metadata: Metadata = {
   title: 'About Us',
   description: 'XDEVS is a software, data, and AI engineering company helping ambitious businesses build and ship products that scale.',
@@ -21,7 +22,7 @@ export default function AboutPage() {
         <section className="border-b border-[var(--border-col)]">
           <div className="px-6 lg:px-12 pt-12 pb-12 border-b border-[var(--border-col)]">
             <p className="text-[10px] font-body font-semibold tracking-widest uppercase text-fg-3 mb-6">ABOUT XDEVS</p>
-            <h1 className="font-display font-extrabold text-fg tracking-tight leading-[0.88]" style={{ fontSize: 'clamp(3rem, 8vw, 8rem)' }}>
+            <h1 className="font-display font-extrabold text-fg tracking-tight leading-[1] max-w-5xl" style={{ fontSize: 'clamp(2rem, 4.5vw, 4.25rem)' }}>
               WE BUILD SOFTWARE THAT HELPS BUSINESSES GROW.
             </h1>
           </div>
@@ -53,6 +54,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+        <TeamSection />
         <CTA />
       </main>
       <Footer />

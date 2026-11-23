@@ -15,7 +15,10 @@ const config: Config = {
       },
       colors: {
         // accent: '#3B82FF', 
-        accent: '#717171', 
+        accent: '#717171',
+        fg: 'var(--fg)',
+        'fg-2': 'var(--fg-2)',
+        'fg-3': 'var(--fg-3)',
       },
       fontSize: {
         'hero': ['clamp(4rem,10vw,9rem)', { lineHeight: '0.92', letterSpacing: '-0.04em' }],

@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import ThemeProvider from '@/components/ThemeProvider'
-import Script from 'next/script'
+import AuthProvider from '@/components/AuthProvider'
 
 export const metadata: Metadata = {
   title: {
@@ -9,41 +9,50 @@ export const metadata: Metadata = {
     template: '%s | XDEVS',
   },
   description:
-    'XDEVS delivers world-class software engineering, data engineering, business intelligence, AI & ML integration, API integrations, and cloud & DevOps for ambitious companies.',
-  keywords: ['software engineering','data engineering','business intelligence','AI integration','cloud devops','XDEVS','tech company','API integrations'],
+    'XDEVS delivers software engineering, data engineering, business intelligence, AI & ML integration, API integrations and cloud & DevOps — and trains the next generation of tech talent through XDEVS Academy.',
+  keywords: ['software engineering', 'data engineering', 'business intelligence', 'AI integration', 'cloud devops', 'XDEVS', 'tech academy Lagos', 'learn UI/UX Nigeria', 'frontend course Lagos'],
   metadataBase: new URL('https://xdevs.io'),
+  manifest: '/manifest.json',
+  // Favicons come from app/favicon.ico, app/icon.png and app/apple-icon.png
   openGraph: {
     type: 'website', locale: 'en_US', url: 'https://xdevs.io',
     siteName: 'XDEVS',
     title: 'XDEVS — Software, Data & AI Engineering',
     description: 'XDEVS delivers world-class software, data, and AI engineering solutions.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'XDEVS' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'XDEVS' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'XDEVS — Software, Data & AI Engineering',
     description: 'XDEVS delivers world-class software, data, and AI engineering solutions.',
-    images: ['/og-image.png'],
+    images: ['/icon-512.png'],
   },
   robots: {
     index: true, follow: true,
-    
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  // alternates:{ canonical: SITE_URL },
 }
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+}
+
+// Applies the saved theme before paint so there is no light/dark flash
+const themeScript = `(function(){try{var t=localStorage.getItem('xdevs-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" 
-        // href="https://fonts.gstatic.com" 
-        crossOrigin='anonymous' />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <Script id="theme-script" type='application/javascript' strategy="beforeInteractive" />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

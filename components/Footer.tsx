@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Newsletter from '@/components/Newsletter'
 
 const cols = {
   SERVICES: [
@@ -12,11 +13,19 @@ const cols = {
   ],
   COMPANY: [
     ['About Us', '/about'],
+    ['Our Team', '/team'],
     ['Our Story', '/our-story'],
     ['Process', '/process'],
     ['Case Studies', '/case-studies'],
-    ['Careers', '/careers'],
     ['Blog', '/blog'],
+  ],
+  'ACADEMY & CAREERS': [
+    ['XDEVS Academy', '/academy'],
+    ['Courses & Pricing', '/academy#courses'],
+    ['Pre-order Tracks', '/academy#preorder'],
+    ['Open Roles', '/careers'],
+    ['Sign in', '/login'],
+    ['Contact', '/contact'],
   ],
   CONNECT: [
     ['Instagram', 'https://www.instagram.com/xdevs.ltd'],
@@ -61,8 +70,8 @@ export default function Footer() {
           </Link>
         ))}
         <div className="col-span-4 flex items-center justify-end gap-6 px-6">
-          {['PRIVACY', 'TERMS', 'FAQ'].map((item) => (
-            <Link key={item} href="#" className="text-[10px] font-body font-semibold tracking-widest uppercase text-fg-3 hover:text-fg transition-colors">
+          {[['CAREERS', '/careers'], ['ACADEMY', '/academy'], ['CONTACT', '/contact']].map(([item, href]) => (
+            <Link key={item} href={href} className="text-[10px] font-body font-semibold tracking-widest uppercase text-fg-3 hover:text-fg transition-colors">
               {item}
             </Link>
           ))}
@@ -91,25 +100,16 @@ export default function Footer() {
         <div className="px-6 lg:px-10 py-8">
           <p className="font-body font-bold text-[10px] tracking-widest uppercase text-fg mb-1">STAY IN TOUCH</p>
           <p className="font-body text-xs tracking-widest uppercase text-fg-3 mb-6">KEEP UPDATED ON WHAT WE&apos;RE BUILDING</p>
-          <div className="flex border border-[var(--border-col)]">
-            <input
-              type="email"
-              placeholder="ENTER YOUR E-MAIL"
-              className="flex-1 bg-transparent px-4 py-3 text-xs font-body tracking-widest text-fg placeholder-fg-3 focus:outline-none"
-            />
-            <button className="bg-fg-3 hover:bg-accent text-[var(--bg)] font-body font-bold text-[10px] tracking-widest uppercase px-5 transition-all duration-150">
-              SUBSCRIBE
-            </button>
-          </div>
+          <Newsletter />
         </div>
       </div>
 
       {/* Link columns */}
-      <div className="grid grid-cols-2 md:grid-cols-3 border-b border-[var(--border-col)]">
+      <div className="grid grid-cols-2 md:grid-cols-4 border-b border-[var(--border-col)]">
         {Object.entries(cols).map(([group, links], gi) => (
           <div
             key={group}
-            className={`px-6 lg:px-10 py-8 ${gi < 2 ? 'border-b md:border-b-0 md:border-r border-[var(--border-col)]' : ''}`}
+            className={`px-6 lg:px-10 py-8 border-[var(--border-col)] ${gi % 2 === 0 ? 'border-r' : 'md:border-r'} ${gi < 2 ? 'border-b md:border-b-0' : ''} ${gi === 3 ? 'md:border-r-0' : ''}`}
           >
             <p className="font-body font-bold text-[10px] tracking-widest uppercase text-fg mb-5">{group}</p>
             <ul className="flex flex-col gap-3">
