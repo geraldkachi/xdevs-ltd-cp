@@ -19,7 +19,7 @@ const cols = {
     ['Blog', '/blog'],
   ],
   CONNECT: [
-    ['Instagram', 'https://www.instagram.com/xdevs.ltd'],
+    ['Instagram', 'https://www.instagramgit remote -v/xdevs.ltd'],
     ['Twitter / X', 'https://twitter.com/xdevsio'],
     ['LinkedIn', 'https://linkedin.com/company/xdevsltd'],
     ['GitHub', 'https://github.com/xdevs'],
